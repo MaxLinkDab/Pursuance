@@ -1,10 +1,15 @@
+var modalId = document.getElementById('.modal_id');
+
 $(document).ready(function () {
 
     const crawls = document.querySelectorAll('.crawl');
 
+
+
     if (crawls.length > 0) {
         crowlOnScroll()
         document.addEventListener("scroll", crowlOnScroll);
+
     }
 
     function crowlOnScroll() {
@@ -18,7 +23,7 @@ $(document).ready(function () {
 
 
             if (isMobile()) {
-                let crawlPoint = window.innerHeight - window.innerHeight / crawlStart ;//innerHeight - высота окна браузера, здесь мы получаем момент старта анимации 
+                let crawlPoint = window.innerHeight - window.innerHeight / crawlStart;//innerHeight - высота окна браузера, здесь мы получаем момент старта анимации 
 
                 if (crawlPoint > window.innerHeight) {
                     crawlPoint = window.innerHeight - window.innerHeight / crawlStart;
@@ -64,9 +69,9 @@ $(document).ready(function () {
     }
 })
 
-function toggleModal(modalID){
+  function toggleModal(modalID) {
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
     document.getElementById(modalID).classList.toggle("flex");
     document.getElementById(modalID + "-backdrop").classList.toggle("flex");
-  }
+}

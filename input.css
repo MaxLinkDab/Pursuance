@@ -27,35 +27,42 @@
 .crawl.from-r {
   transform: translate(120%, 0px);
   opacity: 0;
-  transition: all 0.5s ease 0s;
+  transition: all 0.90s ease 0s;
 }
 
 .crawl.from-l {
   transform: translate(-120%, 0px);
   opacity: 0;
-  transition: all 0.5s ease 0s;
+  transition: all 0.90s ease 0s;
 }
 
 .crawl.from-t {
   transform: translate(0px, -120%);
   opacity: 0;
-  transition: all 0.5s ease 0s;
+  transition: all 0.90s ease 0s;
 }
 
 .crawl.from-b {
   transform: translate(0px, 120%);
   opacity: 0;
-  transition: all 0.5s ease 0s;
+  transition: all 0.90s ease 0s;
 }
 
-/* .crawl[class*="from-"].s-1{
-    transition: all 1s ease 1s;
-} */
+.crawl.from-c {
+  transform: translate(0px, 0px);
+  opacity: 0;
+  transition: all 1s ease 0.25s;
+}
+
 
 .crawl[class*="from-"]._active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
+
+
+
+
 
 html,
 body {
