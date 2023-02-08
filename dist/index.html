@@ -1,34 +1,38 @@
 <!doctype html>
-<html>
+<html class="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+  <link href="output.css" type="text/css" rel="stylesheet">
   <link rel="import" href="/blocs/competitor_bloc.html">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="scripts/script.js"></script>
 </head>
 
-<body>
-  <!-- px-24 -->
+
+<body class="bg-[#e8e8e8] dark:bg-dark-grey">
+  <!-- BLOC: Header-->
+  <!-- <?php require_once "/blocs/header.html" ?> -->
   <header
-    class="sticky top-0 inset-x-0 px-4 py-4 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm dark:bg-slate-100 lg:px-32 2xl:px-80">
-    <a href="#" class="flex items-center whitespace-nowrap text-2xl font-black">
-      <span class="mr-2 w-8">
-        <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
-      </span>
-      Pursuance
+    class=" sticky top-0 inset-x-0 px-4 py-4 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-slate-100  dark:bg-dark-grey text-sm lg:px-32 2xl:px-80">
+
+    <a href="#" class="flex items-center justify-center whitespace-nowrap text-2xl font-black ">
+      <!--       <span class="mr-2 w-8">
+      <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="">
+    </span> -->
+      <img src="assets/svg/logo.svg" alt="S W A G" class="ml-10 lg:ml-0">
+      <h1 class="name_company mx-3">S W A G</h1>
     </a>
-    <input type="checkbox" class="peer hidden" id="navbar-open" achecked />
-    <label class="absolute top-5 right-5 cursor-pointer lg:hidden" for="navbar-open">
+    <input type="checkbox" class="peer hidden" id="navbar-open" achecked="">
+    <label class="absolute top-1/3 right-5 cursor-pointer lg:hidden" for="navbar-open">
       <span class="sr-only">Toggle Navigation</span>
-      <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#4f46e5">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </label>
     <nav aria-label="Header Navigation"
-      class="whitespace-nowrap peer-checked:pt-8 peer-checked:max-h-60 flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row">
+      class="whitespace-nowrap peer-checked: peer-checked:max-h-60 flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row">
       <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
         <li class="lg:mr-12"><a
             class="rounded text-gray-500 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
@@ -43,36 +47,444 @@
             class="rounded text-gray-500 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
             href="#">FAQ</a></li>
       </ul>
-      <hr class="mt-4 w-full lg:hidden" />
+      <hr class="mt-4 w-full lg:hidden">
       <div class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
         <a href="#price" title=""
-          class="whitespace-nowrap inline-block bg-cyan-50 hover:bg-cyan-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 border text-gray-500 font-semibold text-center rounded-lg outline-none transition duration-100 px-4 md:px-8 py-2 md:py-3">Прайс-лист</a>
+          class="whitespace-nowrap inline-block bg-[#938FEA] hover:bg-[#7470B8] active:bg-[#BEBCEB] focus-visible:ring ring-grey-300 border border-solid rounded font-semibold text-center outline-none transition duration-100 px-4 md:px-8 py-2 md:py-3">Начать
+          работу</a>
       </div>
     </nav>
   </header>
 
-  <a name="top"></a>
-  <div class="px-6 py-6 md:py-12 md:px-12 lg:px-32 lg:flex 2xl:px-80">
-    <div class="lg:w-0 lg:flex-1 crawl from-l">
-      <h2
-        class="text-3xl font-serif font-semibold leading-8 tracking-tight text-slate-800 sm:text-6xl sm:leading-tight whitespace-nowrap">
-        Стремимся быть<br><i><u>безупречными</u></i>
-      </h2>
-    </div>
-    <div class="mt-8 sm:w-full sm:max-w-md lg:mt-5 lg:ml-8 crawl from-r">
+  <!-- BLOC: Главная -->
 
-      <p class="max-w-screen-sm lg:text-right md:block text-gray-500">
-        Мы поможем вашей компании всем необходимым:<br>
-        оформлением, программированием<br>
-        и размещением на сервере.
-      </p>
-    </div>
+  <!-- BLOC: Главная с анимацией -->
+  <!-- 
+  <div>
+
+
+    <section class="mb-40">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="absolute block w-full"
+        style="margin: auto; z-index: -10;" height="680" preserveAspectRatio="none" viewBox="0 0 1920 880">
+        <g transform="translate(960,440) scale(1,1) translate(-960,-440)">
+          <linearGradient id="lg-0.047955344060927496" x1="0" x2="1" y1="0" y2="0">
+            <stop stop-color="hsl(217, 88%, 33.7%)" offset="0"></stop>
+            <stop stop-color="hsl(217, 88%, 75.1%)" offset="1"></stop>
+          </linearGradient>
+          <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
+            <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+              calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="0s"
+              values="M0 0L 0 804.2328934685746Q 320 597.3613372284876  640 571.0708916590191T 1280 512.0661063245175T 1920 301.8788007488083L 1920 0 Z;M0 0L 0 877.6839081951588Q 320 668.0720922803877  640 649.0018928349388T 1280 328.7087077664202T 1920 162.95038242563396L 1920 0 Z;M0 0L 0 724.9886210051687Q 320 661.4364572061575  640 623.2173947479624T 1280 359.20353038907734T 1920 135.51673041732283L 1920 0 Z;M0 0L 0 804.2328934685746Q 320 597.3613372284876  640 571.0708916590191T 1280 512.0661063245175T 1920 301.8788007488083L 1920 0 Z">
+            </animate>
+          </path>
+          <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
+            <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+              calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-6.666666666666667s"
+              values="M0 0L 0 765.7607191473613Q 320 641.7853945676919  640 624.2534689988059T 1280 365.27264408032966T 1920 190.38947978522663L 1920 0 Z;M0 0L 0 842.1984196370487Q 320 570.6690721707517  640 540.6844954979398T 1280 439.92879442880593T 1920 200.29713960445451L 1920 0 Z;M0 0L 0 796.6802345094818Q 320 721.9216894353016  640 696.8815669355181T 1280 373.6367381440213T 1920 196.63169821789495L 1920 0 Z;M0 0L 0 765.7607191473613Q 320 641.7853945676919  640 624.2534689988059T 1280 365.27264408032966T 1920 190.38947978522663L 1920 0 Z">
+            </animate>
+          </path>
+          <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
+            <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+              calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-13.333333333333334s"
+              values="M0 0L 0 801.7562714943509Q 320 634.0247183381232  640 605.7090791951217T 1280 503.9393370140325T 1920 224.7551247480177L 1920 0 Z;M0 0L 0 821.0401780336218Q 320 670.8690783540507  640 637.0744123031742T 1280 456.40745286432224T 1920 278.1294357804296L 1920 0 Z;M0 0L 0 744.0534225112256Q 320 637.6425395409125  640 593.2079605185819T 1280 457.03995196824286T 1920 254.87693899994804L 1920 0 Z;M0 0L 0 801.7562714943509Q 320 634.0247183381232  640 605.7090791951217T 1280 503.9393370140325T 1920 224.7551247480177L 1920 0 Z">
+            </animate>
+          </path>
+          <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
+            <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+              calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-20s"
+              values="M0 0L 0 817.8603658675457Q 320 592.9404308081629  640 559.1126621853513T 1280 428.9912604821798T 1920 209.017381620229L 1920 0 Z;M0 0L 0 802.0504889976935Q 320 561.3963273210122  640 537.6024084387631T 1280 430.41283267566695T 1920 256.1972069733954L 1920 0 Z;M0 0L 0 789.4448177495887Q 320 561.9675446430498  640 531.6192318019404T 1280 414.76018143244175T 1920 265.9163329632971L 1920 0 Z;M0 0L 0 817.8603658675457Q 320 592.9404308081629  640 559.1126621853513T 1280 428.9912604821798T 1920 209.017381620229L 1920 0 Z">
+            </animate>
+          </path>
+          <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
+            <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+              calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-26.666666666666668s"
+              values="M0 0L 0 844.0541574423102Q 320 623.0697081316591  640 592.8483890737847T 1280 469.85448734523794T 1920 190.81850676853674L 1920 0 Z;M0 0L 0 871.4928294956283Q 320 618.9784567388518  640 593.1183717103518T 1280 376.5051942642811T 1920 141.32293927545027L 1920 0 Z;M0 0L 0 782.0118384610068Q 320 727.3267836497654  640 694.0476176759635T 1280 518.1545471640493T 1920 276.0053882957168L 1920 0 Z;M0 0L 0 844.0541574423102Q 320 623.0697081316591  640 592.8483890737847T 1280 469.85448734523794T 1920 190.81850676853674L 1920 0 Z">
+            </animate>
+          </path>
+        </g>
+      </svg>
+
+      <div class="container mx-auto py-20 px-6 md:px-12 xl:px-32">
+        <div class="text-center text-gray-800">
+          <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+            style="margin-top: 0px; background-color: hsla(0, 0%, 100%, 0.8);backdrop-filter: saturate(200%) blur(5px);">
+            <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Лучшее предложение на рынке
+              <br /><span class="text-blue-600">для вашего бизнеса</span>
+            </h1>
+            <a class="inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-mdb-ripple="true" data-mdb-ripple-color="light" href="#whywearebetter" role="button">Пройти
+              экскурсию</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- Container for demo purpose -->
+  <div>
+
+    <!-- Section: Design Block -->
+    <section class="mb-40 overflow-hidden">
+      <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%; background-image: url('https://media0.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif?cid=790b7611e0f5fa0769bd4ce78a40283ae228391e1519885f&rid=giphy.gif&ct=g');
+          height: 580px;">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.75);">
+          <div class="flex justify-center items-center h-full">
+            <div class="text-center text-white px-6 md:px-12 ">
+              <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 crawl from-b">Лучшее
+                предложение на рынке<br />
+                <span>для вашего бизнеса</span>
+              </h1>
+              <p class=" text-center flex justify-center items-center lg:px-48 md:px-24 sm:px-12 mb-12 crawl from-b">
+                Создаем сайты под ключ для решения ваших бизнес-задач и прибыли. Если Вам нужен сайт для продаж,
+                презентации компании или рекламы какого-то события, то это к нам!
+                Мы - молодая, динамично развивающаяся студия с опытом разработки веб - сайтов.
+                Работать со «SWAG.tech» — удобно и выгодно. Вы убедитесь в этом уже в первые дни сотрудничества.</p>
+              <a class="inline-block px-7 py-3 mr-1.5 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out crawl from-b"
+                data-mdb-ripple="true" data-mdb-ripple-color="light" href="#whywearebetter" role="button">Начать
+                экскурсию</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="-mt-2.5 md:-mt-4 lg:-mt-6 xl:-mt-10"
+        style="height: 50px; transform: scale(2); transform-origin: top center; color: #1a1b1a ;">
+        <svg viewBox="0 0 2880 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 0 48 L 1437.5 48 L 2880 48 L 2880 0 L 2160 0 C 1453.324 60.118 726.013 4.51 720 0 L 0 0 L 0 48 Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+    </section>
+    <!-- Section: Design Block -->
+
   </div>
+  <!-- 
+  <div class="gekon_object">
+    <img src="assets/image/eye_gekon.svg" alt="" class="eye_gekon">
+    <img src="assets/image/gekon.png" alt="gekon">
+  </div>
+ -->
+
+  <!-- BLOC: Главная с фотоном и квадратным блоком -->
+  <!--   <div>
+    <section class="mb-40">
+      <div class="relative overflow-hidden bg-no-repeat bg-cover"
+        style="background-position: 50%; background-image: url('https://media0.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif?cid=790b7611e0f5fa0769bd4ce78a40283ae228391e1519885f&rid=giphy.gif&ct=g'); height: 500px;">
+      </div>
+
+      <div class="container mx-auto px-6 md:px-12 xl:px-32">
+        <div class="text-center text-gray-800">
+          <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+            style="margin-top: -170px; background:  hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(5px);">
+            <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Лучшее предложение на
+              рынке<br /><span class="text-[#756035]">Для вашего бизнеса</span></h1>
+            <a class="inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 bg-[#756035] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Начать экскурсию</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+  <!-- 
+  <section>
+    <div>
+
+      <div class="container px-10 py-10 mx-auto my-auto lg:space-x-8 lg:flex">
+        <div class="lg:text-left w-1/2">
+          <div class="">
+            <h2
+              class="mb-4 text-3xl dark:text-dark-text-primary font-normal font-serif leading-8 tracking-tight sm:text-6xl sm:leading-tight whitespace-wrap">
+              Стремимся быть<br><i>Безупречными</i>
+            </h2>
+          </div>
+          <div class="my-4 pt-4 text-dark-text-primary">
+            <p class="text-xl">
+              Мы поможем вашей компании всем необходимым:<br>
+              оформлением, программированием<br>
+              и размещением на сервере.
+            </p>
+          </div>
+          <div class="my-4 dark:text-dark-text-secondary text-xl">
+            <p class="text-justify">
+              <a href="mailto:pursuance@pursuance.tech?subject=Разработка сайта&body=Здравствуйте,хочу заказать у вас сайт-визитку"
+                title="pursuance@pursuance.tech" class="text-justify">mail: pursuance@pursuance.tech</a><br>
+              <a href="tel:+7-901-715-14-56" title="+7-901-715-14-56" class="text-justify">телефон: +7-901-715-14-56
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="my-4 right-0 w-1/2 mb-auto h-[100%] inline-block">
+          <img class="border-4 border-[#747162] object-cover"
+            src="https://img2.goodfon.ru/original/1366x768/c/7d/programmist-kod-code-1156.jpg">
+        </div>
+      </div>
+
+      <p class="w-1/2 text-center my-2 text-dark-text-secondary text-xl">Факты</p>
+
+      <div class="container mx-auto my-auto pе-4  lg:space-x-8 lg:flex  whitespace-wrap">
+        
+        <div class=" pl-5 pr-5 pt-5 border-2 border-[#747162] w-1/2 h-auto ">
+          <table class="border-separate border-spacing-4 ">
+            <tbody>
+              <tr>
+                <td class="w-full border-2 border-[#747162]">
+                  <div>
+                    <table class="mr-5 border-separate border-spacing-7 w-full justify-center">
+                      <tbody>
+                        <tr>
+                          <td class="text-center items-center">
+                            <img src="assets/svg/doc.svg">
+                          </td>
+                          <td class="text-right">
+                            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">3
+                            </h2>
+                            <p class="max-w-screen-smpb-10 text-gray-500 dark:text-dark-text-secondary text-xl">Готовых
+                              сайта
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center items-center">
+                            <img src="assets/svg/phone.svg">
+                          </td>
+                          <td class="text-right">
+                            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">2
+                            </h2>
+                            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary text-xl">Приложения
+                            </p>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center items-center">
+                            <img src="assets/svg/time.svg">
+                          </td>
+                          <td class="text-right">
+                            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">12
+                            </h2>
+                            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary text-xl">Будней</p>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center items-center">
+                            <img src="assets/svg/star.svg">
+                          </td>
+                          <td class="text-right">
+                            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">
+                              Бесконечно</h2>
+                            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary text-xl">Возможностей
+                            </p>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+                <div class="backdrop-blur-sm bg-white/30 backdrop-brightness-150">
+                  <td class="py-4 px-10 border-2 border-[#747162] w-full h-full " background="assets/image/gallery.jpg">
+                    <a href="#">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="">
+                              <p
+                                class="flex justify-center text-center items-center h-full text-3xl dark:text-dark-text-primary font-semibold leading-8 tracking-tight sm:text-2xl sm:leading-tight whitespace-wrap">
+                                Галерея<br>↓</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                </div>
+
+              </tr>
+              <tr>
+                <td class="text-center text-dark-text-secondary">
+                  О нас
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="p1"> </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
 
-  <div class="flex shrink gap-5 md:gap-12 lg:gap-32 md:px-12 lg:px-24 2xl:px-80 px-6 flex-col sm:flex-row">
+        <div class="lg:text-left w-1/2 grid grid-cols-2">
+          <div>
+            <div class="">
+              <p class="text-dark-text-secondary">ПРЕИМУЩЕСТВА</p>
+            </div>
+            <div class="pt-2 pt-4 text-dark-text-primary">
+              <div class="pt-2 dark:text-dark-text-primary">
+                <p> Мы сделаем за вас всю работу:
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2 dark:text-dark-text-primary">
+              <div class="pt-2 dark:text-dark-text-primary">
+                <p><img src="assets/svg/pen.svg" class=" inline-block pr-2">оформление</p>
+              </div>
+            </div>
+
+            <div class="pt-2 dark:text-dark-text-primary">
+              <div class="pt-2 dark:text-dark-text-primary inline-block">
+                <p><img src="assets/svg/laptop.svg" class=" inline-block pr-2">программирование</p>
+              </div>
+            </div>
+
+            <div class="pt-2 dark:text-dark-text-primary">
+              <div class="pt-2 dark:text-dark-text-primary inline-block">
+                <p><img src="assets/svg/filebox.svg" class="inline-block pr-2 w-[24px] h-[16px]">размещение на сервере
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-8">
+              <p class="text-dark-text-secondary">НЕДОСТАТКИ</p>
+              <div class="pt-2 dark:text-dark-text-primary">
+                <div class="pt-2 dark:text-dark-text-primary inline-block">
+                  <p>Слишком хороши в своем деле</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center text-center items-center">
+            <a href="#">
+              <p class="text-dark-text-secondary">НАШИ ИДЕИ</p>
+              <div class="w-[150px] h-[150px] bg-[#f4c96a] flex justify-center text-center items-center ">Мы <br> ↓
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+
+  <!--   <section>
+    <div class="bloc_general">
+      <div class="container px-1 pl-auto ">
+        <div
+          class="container ml-16  pt-2 sm:px-6 lg:flex lg:px-8 xl:px-10 2xl:px-56 h-full w-full grid grid-cols-2 flex items-center justify-center mb-[656px]">
+          <div
+            class="relative z-20 ml-auto max-w-[40rem] pb-2 pt-4 lg:ml-0 lg:w-[30rem] lg:max-w-none lg:flex-none lg:pb-2 lg:pr-4 grid grid-rows-4 gap-2 place-content-beetwen flex justify-start">
+            <div class="min-h-0">
+              <h2
+                class="text-3xl dark:text-dark-text-primary font-semibold leading-8 tracking-tight sm:text-6xl sm:leading-tight whitespace-nowrap">
+                Стремимся быть<br><i><u>Безупречными</u></i>
+              </h2>
+            </div>
+            <div class="pt-4 text-dark-text-primary">
+              <p>
+                Мы поможем вашей компании всем необходимым:<br>
+                оформлением, программированием<br>
+                и размещением на сервере.
+              </p>
+            </div>
+            <div class="min-h-0 dark:text-dark-text-secondary">
+              <p class="text-justify">
+                <a href="mailto:pursuance@pursuance.tech?subject=Разработка сайта&body=Здравствуйте,хочу заказать у вас сайт-визитку"
+                  title="pursuance@pursuance.tech">mail: pursuance@pursuance.tech</a><br>
+                <a href="tel:+7-901-715-14-56" title="+7-901-715-14-56">телефон: +7-901-715-14-56 </a>
+              </p>
+            </div>
+            <div></div>
+          </div>
+          <div class=""></div>
+          <div class=" relative pt-6 pr-0 flex lg:block xl:block 1xl:block ">
+            <div>
+              <div class="relative  ">
+                <div class="relative z-10 overflow-hidden shadow-xl border-4 border-[#747162]"><img
+                    class="h-[500px] ml-[100%] flex justify-start transform duration-300 object-cover"
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-1 mx-auto bloc_facts">
+      <div
+        class="container ml-16  pt-2 sm:px-6 lg:flex lg:px-8 xl:px-10 2xl:px-56 h-full w-full grid grid-cols-2 grid-reverse justify-center flex flex-row-reverse ">
+        <div
+          class="relative z-20 ml-auto max-w-[40rem] pb-2 pt-4 lg:ml-0 lg:w-[30rem] lg:max-w-none lg:flex-none lg:pb-2 lg:pr-4 grid grid-rows-4 gap-2 place-content-beetwen flex justify-end">
+          <div></div>
+          
+          <div class="min-h-0">
+            <h2
+              class="text-3xl dark:text-dark-text-primary font-semibold leading-8 tracking-tight sm:text-6xl sm:leading-tight whitespace-nowrap">
+              Стремимся быть<br><i><u>Безупречными</u></i>
+            </h2>
+          </div>
+          <div class="pt-4 text-dark-text-primary">
+            <p>
+              Мы поможем вашей компании всем необходимым:<br>
+              оформлением, программированием<br>
+              и размещением на сервере.
+            </p>
+          </div>
+          <div class="min-h-0 dark:text-dark-text-secondary">
+            <p class="text-justify">
+              <a href="mailto:pursuance@pursuance.tech?subject=Разработка сайта&body=Здравствуйте,хочу заказать у вас сайт-визитку"
+                title="pursuance@pursuance.tech">mail: pursuance@pursuance.tech</a><br>
+              <a href="tel:+7-901-715-14-56" title="+7-901-715-14-56">телефон: +7-901-715-14-56 </a>
+            </p>
+          </div>
+        </div>
+        <div class=""></div>
+        <div class=" relative flex-shrink-0 z-10 pt-6 pr-0 flex lg:block xl:block 1xl:block w-[1000%] ">
+          <div>
+            <div class="relative flex justify-center">
+              <div class="relative z-10 overflow-hidden shadow-xl border-4 border-[#747162]"><img
+                  class="h-[550px] w-[1100] transform duration-300 object-cover "
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section> -->
+  <!-- ========== заготовки ========== -->
+
+  <!--   <img
+    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    loading="lazy" alt="Photo by Martin Sanchez"
+    class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+  <h2
+    class="text-3xl dark:text-dark-text-primary font-semibold leading-8 tracking-tight sm:text-6xl sm:leading-tight whitespace-nowrap">
+    Стремимся быть<br><i><u>Безупречными</u></i>
+  </h2>
+
+  <p class="">
+    Мы поможем вашей компании всем необходимым:<br>
+    оформлением, программированием<br>
+    и размещением на сервере.
+  </p> -->
+
+
+
+
+  <!--   <div class="z-1 flex shrink gap-5 md:gap-12 lg:gap-32 md:px-12 lg:px-24 2xl:px-80 px-6 flex-col sm:flex-row">
     <div class="grow shrink crawl from-l">
-      <div class="group h-56 sm:h-72 md:h-96 md:col-span-2 flex items-end overflow-hidden relative bg-slate-700">
+      <div class="group h-full sm:h-72 md:h-96 md:col-span-2 flex items-end overflow-hidden relative bg-slate-700">
         <img
           src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           loading="lazy" alt="Photo by Martin Sanchez"
@@ -83,39 +495,33 @@
       <div class="md:h-64 relative">
         <div class="grow shrink sm:h-44 md:h-64">
           <div class="sm:text-right text-left md:leading-10 leading-3">
-            <h2 class="text-gray-800 text-2xl lg:text-3xl font-semibold">3</h2>
-            <p class="max-w-screen-sm text-gray-500">Сайтов</p>
-            <h2 class="text-gray-800 text-2xl lg:text-3xl font-semibold">2</h2>
-            <p class="max-w-screen-sm text-gray-500">Клиентов</p>
-            <h2 class="text-gray-800 text-2xl lg:text-3xl font-semibold">∞</h2>
-            <p class="max-w-screen-sm text-gray-500">Способностей</p>
+            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">3</h2>
+            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary">Сайтов</p>
+            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">2</h2>
+            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary">Клиентов</p>
+            <h2 class="text-gray-800 dark:text-dark-text-primary text-2xl lg:text-3xl font-semibold">∞</h2>
+            <p class="max-w-screen-sm text-gray-500 dark:text-dark-text-secondary">Способностей</p>
           </div>
         </div>
       </div>
       <a href="#whywearebetter" title=""
-        class="w-32 sm:h-28 md:h-32 whitespace-nowrap inline-block bg-cyan-50 hover:bg-cyan-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 border text-gray-500 font-semibold text-center rounded-lg outline-none transition duration-100 px-4 md:px-8 sm:py-8 py-10 md:py-9">↓<br>
-        О нас
-    </div></a>
-  </div>
+        class=" w-32 sm:h-28 md:h-32 whitespace-nowrap inline-block bg-cyan-50 hover:bg-cyan-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 border text-gray-500 font-semibold text-center rounded-lg outline-none transition duration-100 px-4 md:px-8 sm:py-8 py-10 md:py-9">↓<br>
+        О нас</a>
+    </div>
+  </div> -->
 
-
-  <div class="bg-white pb-6 sm:py-2 lg:pb-10">
-    <div class="max-w-screen-2xl px-6 md:px-12 lg:px-24 2xl:px-80 mx-auto">
-
-      <section class="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-8 lg:pt-8 lg:pb-0 pb-6">
-        <!-- stats - start -->
-        <div class="grid grid-cols-2 md:flex md:divide-x gap-4 -mx-6 md:-mx-8">
+  <!-- BLOC: Соц. сети -->
+  <!--  <div class="grid grid-cols-2 md:flex md:divide-x gap-4 -mx-6 md:-mx-8">
         </div>
-        <!-- stats - end -->
-
-        <!-- social - start -->
         <div class="flex justify-center lg:justify-start items-center gap-4 crawl from-b">
-          <span class="text-gray-400 text-sm sm:text-base font-semibold tracking-widest uppercase">Мы в соцсетях</span>
+          <span
+            class="text-gray-400 dark:text-dark-text-primary text-sm sm:text-base font-semibold tracking-widest uppercase">Мы
+            в соцсетях</span>
           <span class="w-12 h-px bg-gray-200"></span>
 
           <div class="flex gap-4">
             <a href="#" target="_blank"
-              class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              class="text-gray-400 dark:text-dark-text-primary hover:text-gray-500 active:text-gray-600 transition duration-100">
               <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -124,7 +530,7 @@
             </a>
 
             <a href="#" target="_blank"
-              class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              class="text-gray-400 dark:text-dark-text-primary hover:text-gray-500 active:text-gray-600 transition duration-100">
               <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -133,7 +539,7 @@
             </a>
 
             <a href="#" target="_blank"
-              class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              class="text-gray-400 dark:text-dark-text-primary hover:text-gray-500 active:text-gray-600 transition duration-100">
               <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -142,7 +548,7 @@
             </a>
 
             <a href="#" target="_blank"
-              class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              class="text-gray-400 dark:text-dark-text-primary hover:text-gray-500 active:text-gray-600 transition duration-100">
               <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -151,181 +557,215 @@
             </a>
           </div>
         </div>
-        <!-- social - end -->
       </section>
     </div>
-  </div>
+  </div> -->
 
 
-  <!-- Блок почему мы лучше конкурентов -->
+  <!-- BLOC: Почему мы лучше конкурентов -->
   <a name="whywearebetter"></a>
-  <section class="bg-gradient-to-tl from-[#D2B3F5] via-[#B1F5E8] to-[#D2B3F5]">
+  <section>
     <div class="container px-6 py-12 mx-auto">
-      <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl white:text-white">Почему мы лучше конкурентов?
+      <h1
+        class="text-4xl font-semibold text-gray-800 dark:text-dark-text-primary lg:text-4xl white:text-white text-center  ">
+        Конкурентные <span class="text-dark-primary">преимущества</span>
       </h1>
 
-      <div class="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3">
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-[#4EAD6D] rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <div class="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div>
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">Время и качество </h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white  dark:text-dark-text-primary">Индивидуальный
+              подход</h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Наша команда очень любит свою работу, выполняет ее креативно и красиво и что важно подходят
-              к задаче серьезно, поэтому она выполняется качественно и всего за 2 дня
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark:text-dark-text-secondary">
+              Мы стараемся учитывать абсолютно все идеи и пожелания клиента
             </p>
           </div>
         </div>
 
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-blue-600 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div>
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">Цена</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white dark:text-dark-text-primary">Фиксированные цены
+            </h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Наша цена очень занижена, т.к. должны поднять нашу репутацию, получить отзывы от клиентов и
-              конечно же портфолио
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark:text-dark-text-secondary">
+              Вы получите полностью готовый сайт без дополнительных затрат
             </p>
           </div>
         </div>
 
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-blue-600 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div class="crawl from-l">
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">Do i need a referral?</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white dark:text-dark-text-primary">Техническая
+              поддержка</h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur
-              eveniet veritatis
-              quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis
-              illum doloremque
-              magni ex corrupti tempora quis.
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark:text-dark-text-secondary">
+              После выполнения заказа, бесплатное обслуживание 6 месяцев
             </p>
           </div>
         </div>
 
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-blue-600 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div class="crawl from-l">
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">Is the cost of the appoinment
-              covered by
-              private health insurance?</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white dark:text-dark-text-primary">Короткие сроки</h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur
-              eveniet veritatis
-              quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis
-              illum doloremque
-              magni ex corrupti tempora quis.
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark: dark:text-dark-text-secondary">
+              Гарантируем выполнение заказа в обозначенные сроки
             </p>
           </div>
         </div>
 
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-blue-600 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div class="crawl from-l">
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">What is your cancellation
-              policy?</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white dark:text-dark-text-primary">Размещение в
+              Интернет</h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur
-              eveniet veritatis
-              quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis
-              illum doloremque
-              magni ex corrupti tempora quis.
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark:text-dark-text-secondary">
+              Выполним поисковую оптимизацию, чтобы ваш сайт был на первых страницах
             </p>
           </div>
         </div>
 
-        <div class="crawl from-l">
-          <div class="inline-block p-3 text-white bg-blue-600 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div class="crawl from-l flex flex-col items-center space-y-3 text-center mt-2">
+          <div class="inline-block p-3 text-white bg-dark-primary rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
           </div>
 
           <div>
-            <h1 class="text-xl font-semibold text-gray-700 white:text-white">What are the parking and public
-              transport
-              options?</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 text-white dark:text-dark-text-primary">Адаптация под любые
+              устройства</h1>
 
-            <p class="mt-2 text-sm text-gray-500 white:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur
-              eveniet veritatis
-              quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis
-              illum doloremque
-              magni ex corrupti tempora quis.
+            <p class="mt-2 text-xl text-gray-600 text-gray-300 dark:text-dark-text-secondary">
+              Разработаем сайт, удобный на любом устройстве: компьютер, ноутбук, планшет и телефон
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- 1 портфолио -->
-  <section class="bg-gradient-to-bl from-[#D2B3F5] via-[#B1F5E8] to-[#D2B3F5]">
-    <div class="container px-6 py-10 mx-auto">
-      <div class="text-center">
-        <a name="gallery">
-          <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl white:text-white">Наши работы</h1>
-        </a>
-        <p class="max-w-lg mx-auto mt-4 text-gray-500">
-          Наш сайт и есть наше портфолио, это хорошее доказательство нашей хорошей работы! но в скором времени вы
-          увидите больше наших работ (Этот вариант лучше всего адаптирован под мобилки)
-        </p>
+
+  <section class="mx-auto flex max-w-lg flex-col px-4 py-10 lg:max-w-screen-xl lg:flex-row">
+    <div class="max-w-md pr-20 lg:pt-28">
+      <img
+        src="https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/601074ed0f05cd25097215a4_6002086f72b7277e1f01d682_ryan-morrison-illustration-1.png"
+        alt="" />
+    </div>
+    <div class="">
+      <h2
+        class="mb-10  max-w-full text-center text-4xl  font-bold leading-snug lg:text-5xl lg:leading-snug dark: text-dark-text-primary">
+        Привлечение клиентов <br><span class="text-dark-primary"> в интернете</span> реально для
+        любого бизнеса</h2>
+      <div class="grid gap-y-12 gap-x-8 lg:grid-cols-2">
+        <div>
+          <p class="mb-6 border-l-4 border-dark-primary pl-4 text-2xl leading-10 dark: text-dark-text-primary"> Создание
+            сайта – выгодное вложение.
+          </p>
+          <p class="text-lg text-gray-800 dark: text-dark-text-secondary">Вы платите один раз за создание сайта и он
+            остается навсегда! Сайт работает каждый день, без выходных и праздников!</p>
+        </div>
+        <div>
+          <p class="mb-6 border-l-4 border-dark-primary pl-4 text-2xl leading-10 dark: text-dark-text-primary ">
+            Сайт — это лицо ваших товаров и услуг.
+          </p>
+          <p class="text-lg text-gray-800 dark: text-dark-text-secondary">Туда может зайти каждый, сидя на работе, дома,
+            в дороге. В любое время, все выходные и праздничные дни, клиенты вас не теряют.</p>
+        </div>
+        <div>
+          <p class="mb-6 border-l-4 border-dark-primary pl-4 text-2xl leading-10 dark: text-dark-text-primary">Даже
+            обыкновенный сайт в интернете</p>
+          <p class="text-lg text-gray-800 dark: text-dark-text-secondary">Это лучше, чем ничего с точки зрения
+            привлечения клиентов и повышения их лояльности.</p>
+        </div>
+        <div>
+          <p class="mb-6 border-l-4 border-dark-primary pl-4 text-2xl leading-10 dark: text-dark-text-primary ">Просто
+            создайте веб-сайт для своего бизнеса</p>
+          <p class="text-lg text-gray-800 dark: text-dark-text-secondary">И он поможет вам заявить о себе, не тратя
+            много денег на рекламу.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
 
+  <div class="mx-auto my-10 max-w-lg px-4 text-gray-600 md:max-w-screen-lg">
+    <div class="mb-10  flex flex-col border-t-4 border-dark-primary pt-4 md:flex-row">
+      <h2 class="mr-auto mb-4 w-full text-5xl font-bold lg:text-3xl text-dark-primary whitespace-pre-wrap text-center lg:text-left ">Опыт<span
+          class="text-dark-primary md:text-gray-600 dark:text-dark-text-primary"> нашей команды </span>
+      </h2>
+    </div>
+    <div class="flex flex-col md:flex-row">
+      <div>
+        <p class="mb-4 md:pr-10 md:text-xl md:leading-relaxed lg:pr-28 dark:text-dark-text-secondary">В период пандемии мы не сидели сложа руки, пока
+          все остальные смотрели неполезные видео и листали социальные сети или занимались ненужными делами, вся наша команда активно изучала технологии
+          и рынок, используя много практики мы научились делать многое, при этом <span class="text-dark-primary">качественно</span>.</p>
+        <p class="md:pr-10 md:text-xl md:leading-relaxed lg:pr-28 dark:text-dark-text-secondary">Наша молодая команда из основанная 3-мя друзьями имеет опыт в программировании, дизайна, ux/ui, а так же маркетинга, <span class="text-dark-primary">и мы не собираемся останавливаться на этом</span></p>
+      </div>
+      <p class="hidden uppercase md:block md:text-7xl text-center dark:text-dark-text-primary">
+        3 <br />
+        <span class="whitespace-nowrap text-dark-primary">года</span>
+      </p>
+    </div>
+  </div>
 
-      <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2 mx-auto flex items-center justify-center">
-        <!-- если колонок больше, то изменить grid-cols-{число колонок} -->
+
+  <!-- BLOC: Наши работы-->
+
+  <!-- <section>
         <div class="crawl from-l">
           <img class="relative z-10 object-cover w-full rounded-md h-96"
             src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             alt="">
 
-          <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+          <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow bg-gray-900">
             <a href="#" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
               2Get.project
             </a>
 
-            <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+            <p class="mt-3 text-sm text-gray-300 md:text-sm">
               Сайт для нашей компании, который был создан с нуля всего за 2 дня, при этом не зная никаких основ!
               Считаю что это успех, как для нас, так и для вас!
             </p>
@@ -339,12 +779,12 @@
             src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             alt="">
 
-          <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-            <a href="#" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+          <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 rounded-md shadow bg-gray-900">
+            <a href="#" class="font-semibold hover:underline text-white md:text-xl">
               2Get.project
             </a>
 
-            <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+            <p class="mt-3 text-sm text-gray-300 md:text-sm">
               Сайт для нашей компании, который был создан с нуля всего за 2 дня, при этом не зная никаких основ!
               Считаю что это успех, как для нас, так и для вас!
             </p>
@@ -354,127 +794,740 @@
         </div>
 
       </div>
-  </section>
-  <!-- Ценник, но только по скидке -->
-  <section class="bg-white white:bg-gray-900">
-    <div class="container px-6 py-8 mx-auto">
-      <div class="sm:flex sm:items-center sm:justify-center">
-        <div>
-          <a name="price"></a>
-          <h2 class="text-center text-3xl font-bold text-gray-800 lg:text-4xl white:text-gray-100">Наш прайс</h2>
-          <p class="text-center mt-4 text-gray-500 white:text-gray-400">Выполняем ваши хотелки за шекели (этот раздел не
-            навсегда, а только на первое время)</p>
-        </div>
-      </div>
-
-      <div class="grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  </section> -->
 
 
-        <div
-          class="px-6 py-4 transition-colors duration-300 transform bg-gray-700 rounded-lg white:bg-gray-800 crawl from-l">
-          <h2 class="text-3xl font-bold text-white lg:text-3xl white:text-white">Новичок</h2>
-          <h4 class="mt-2 text-4xl font-normal text-gray-100">1000 <span
-              class="text-base font-normal text-gray-400">Руб.</span></h4>
+  <!-- BLOC: О нас  -->
 
-          <h4 class="mt-2 text-1xl font-normal text-gray-100 line-through">3000 <span
-              class="text-base font-normal text-gray-400">Руб.</span></h4>
+  <!-- BLOC: наша команда -->
 
-          <p class="mt-4 text-gray-300">Сайт-визитка без подключения базы данных, все просто, только верстка</p>
+  <div class="container my-24 px-6 mx-auto">
+    <section class="mb-32 text-gray-800 text-center">
+      <h2 class="text-3xl font-bold mb-12 dark:text-dark-text-primary">Наши <span class="text-dark-primary">двигатели прогресса</span></h2>
 
-          <div class="mt-8 space-y-8">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
+      <div class="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
+
+
+        <div class="mb-6 lg:mb-0">
+          <div class="dark:bg-[#ebe4d1] block rounded-lg shadow-lg">
+            <div class="relative overflow-hidden bg-no-repeat bg-cover">
+              <img src="assets/teams/denis_rangelov.jpg" class="w-full rounded-t-lg" />
+              <a href="#!">
+                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
+              </a>
+              <svg class="absolute mb-[-2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+                style="left: 0; bottom: 0">
+                <path fill="#ebe4d1"
+                  d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
               </svg>
-
-              <span class="mx-4 text-gray-300">Одностраничный <br> сайт-визитка</span>
             </div>
-
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-
-              <span class="mx-4 text-gray-300">Время разработки - 2 дня</span>
+            <div class="p-6 h-[156px]">
+              <h5 class="text-2xl font-bold mb-4">Денис Рангелов</h5>
+              <p class="dark:text-gray-500 mb-4 text-lg">CPO и правое полушарие мозга команды</p>
+              <ul class="list-inside flex mx-auto justify-center">
             </div>
-
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-
-              <span class="mx-4 text-gray-300">Оригинальный дизайн</span>
-            </div>
-
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-
-              <span class="mx-4 text-gray-300">Захостим и задеплоим <br> проект за вас</span>
-            </div>
-
-            <button
-              class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" type="button" onclick="toggleModal('modal-id')">
-              Выбрать план
-            </button>
-
           </div>
+        </div>
 
+        <div class="mb-6 lg:mb-0">
+          <div class="dark:bg-[#ebe4d1] block rounded-lg shadow-lg">
+            <div class="relative overflow-hidden bg-no-repeat bg-cover">
+              <img src="assets/teams/max_shonin.jpg" class=" w-full rounded-t-lg" />
+              <a href="#!">
+                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
+              </a>
+              <svg class="absolute mb-[-2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+                style="left: 0; bottom: 0">
+                <path fill="#ebe4d1"
+                  d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+              </svg>
+            </div>
+            <div class="p-6 h-[156px]">
+              <h5 class="text-2xl font-bold mb-4">Максим Шонин</h5>
+              <p class="dark:text-gray-500 mb-4 text-lg">CTO и левое полушарие мозга команды</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6 lg:mb-0">
+          <div class="dark:bg-[#ebe4d1] block rounded-lg shadow-lg">
+            <div class="relative overflow-hidden bg-no-repeat bg-cover">
+              <img src="assets/teams/anna_kuchina.jpg" class="w-full rounded-t-lg" />
+              <a href="#!">
+                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
+              </a>
+              <svg class="absolute mb-[-2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+                style="left: 0; bottom: 0">
+                <path fill="#ebe4d1"
+                  d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+              </svg>
+            </div>
+            <div class="p-6 h-[156px]">
+              <h5 class="text-2xl font-bold mb-4">Анна Кучина</h5>
+              <p class="dark:text-gray-500 mb-4 text-lg">Копирайтер</p>
+              <ul class="list-inside flex mx-auto justify-center">
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-  </section>
-  <section>
-  <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
-    <div class="relative w-auto my-6 mx-auto max-w-3xl">
-      <!--content-->
-      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-        <!--header-->
-        <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-          <h3 class="text-3xl font-semibold">
-            Наши контакты
-          </h3>
-          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
-            <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-              ×
-            </span>
-          </button>
+    </section>
+
+  </div>
+
+  <!-- с круглыми аватарками -->
+
+  <!-- <div class="container my-24 px-6 mx-auto">
+    <section class="mb-32 text-gray-800 text-center">
+      <h2 class="text-3xl font-bold mb-32">Meet the <u class="text-blue-600">team</u></h2>
+
+      <div class="grid gap-x-6 lg:gap-x-12 md:grid-cols-3">
+        <div class="mb-24 md:mb-0">
+          <div class="rounded-lg shadow-lg h-full block bg-white">
+            <div class="flex justify-center">
+              <div class="flex justify-center" style="margin-top: -75px">
+                <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-full mx-auto shadow-lg" alt=""
+                  style="width: 150px" />
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-bold mb-4">Marta Smith</h5>
+              <p class="mb-6">Frontend Developer</p>
+              <ul class="list-inside flex mx-auto justify-center">
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                  </svg>
+                </a>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!--body-->
-        <div class="relative p-6 flex-auto">
-          <p class="my-4 text-slate-500 text-lg leading-relaxed">
-            Если вы хотите заказать сайт  у нас, тыкните на нашу почту, или позвоните нам по телефону <br>
-            <br>
-            <a href="mailto:pursuance@pursuance.tech?subject=Разработка сайта&body=Здравствуйте,хочу заказать у вас сайт-визитку" title="pursuance@pursuance.tech">mail: pursuance@pursuance.tech</a><br>
-            <a href="tel:+7-901-715-14-56" title="+7-901-715-14-56">телефон: +7-901-715-14-56 </a>
-          </p>
+
+        <div class="mb-24 md:mb-0">
+          <div class="rounded-lg shadow-lg h-full block bg-white">
+            <div class="flex justify-center">
+              <div class="flex justify-center" style="margin-top: -75px">
+                <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" class="rounded-full mx-auto shadow-lg" alt=""
+                  style="width: 150px" />
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-bold mb-4">Darren Randolph</h5>
+              <p class="mb-6">Marketing expert</p>
+              <ul class="list-inside flex mx-auto justify-center">
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                  </svg>
+                </a>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!--footer-->
-        <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-          <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
-            Закрыть
-          </button>
-          <button class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
-            Ок
-          </button>
+
+        <div class="">
+          <div class="rounded-lg shadow-lg h-full block bg-white">
+            <div class="flex justify-center">
+              <div class="flex justify-center" style="margin-top: -75px">
+                <img src="https://mdbootstrap.com/img/new/avatars/15.jpg" class="rounded-full mx-auto shadow-lg" alt=""
+                  style="width: 150px" />
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-bold mb-4">Ayat Black</h5>
+              <p class="mb-6">Web designer</p>
+              <ul class="list-inside flex mx-auto justify-center">
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M256 8C119.252 8 8 119.252 8 256s111.252 248 248 248 248-111.252 248-248S392.748 8 256 8zm163.97 114.366c29.503 36.046 47.369 81.957 47.835 131.955-6.984-1.477-77.018-15.682-147.502-6.818-5.752-14.041-11.181-26.393-18.617-41.614 78.321-31.977 113.818-77.482 118.284-83.523zM396.421 97.87c-3.81 5.427-35.697 48.286-111.021 76.519-34.712-63.776-73.185-116.168-79.04-124.008 67.176-16.193 137.966 1.27 190.061 47.489zm-230.48-33.25c5.585 7.659 43.438 60.116 78.537 122.509-99.087 26.313-186.36 25.934-195.834 25.809C62.38 147.205 106.678 92.573 165.941 64.62zM44.17 256.323c0-2.166.043-4.322.108-6.473 9.268.19 111.92 1.513 217.706-30.146 6.064 11.868 11.857 23.915 17.174 35.949-76.599 21.575-146.194 83.527-180.531 142.306C64.794 360.405 44.17 310.73 44.17 256.323zm81.807 167.113c22.127-45.233 82.178-103.622 167.579-132.756 29.74 77.283 42.039 142.053 45.189 160.638-68.112 29.013-150.015 21.053-212.768-27.882zm248.38 8.489c-2.171-12.886-13.446-74.897-41.152-151.033 66.38-10.626 124.7 6.768 131.947 9.055-9.442 58.941-43.273 109.844-90.795 141.978z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                  </svg>
+                </a>
+                <a href="#!" class="px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 text-blue-600">
+                    <path fill="currentColor"
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                  </svg>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- наша команда квадратные авы -->
+  <!-- <section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
+        <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of
+          open-source web components and elements built with the utility classes from Tailwind</p>
+      </div>
+      <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="assets/teams/x3Z2pS3g3V8.jpg"
+              alt="Bonnie Avatar">
+          </a>
+          <div class="p-5">
+            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <a href="#">Шонин Александр</a>
+            </h3>
+            <span class="text-gray-500 dark:text-gray-400">CEO & Web Developer</span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Bonnie drives the technical strategy of the
+              flowbite platform and brand.</p>
+            <ul class="flex space-x-4 sm:mt-0">
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+              src="assets/teams/photo_2023-02-03_14-16-33.jpg" alt="Jese Avatar">
+          </a>
+          <div class="p-5">
+            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <a href="#">Денис Рангелов</a>
+            </h3>
+            <span class="text-gray-500 dark:text-gray-400">CTO</span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Jese drives the technical strategy of the
+              flowbite platform and brand.</p>
+            <ul class="flex space-x-4 sm:mt-0">
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+              src="assets/teams/photo_2023-02-03_14-16-23.jpg" alt="Michael Avatar">
+          </a>
+          <div class="p-5">
+            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <a href="#">Макс Линк</a>
+            </h3>
+            <span class="text-gray-500 dark:text-gray-400">Senior Front-end Developer</span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Michael drives the technical strategy of
+              the flowbite platform and brand.</p>
+            <ul class="flex space-x-4 sm:mt-0">
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia Avatar">
+          </a>
+          <div class="p-5">
+            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <a href="#">Lana Byrd</a>
+            </h3>
+            <span class="text-gray-500 dark:text-gray-400">Marketing & Sale</span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Lana drives the technical strategy of the
+              flowbite platform and brand.</p>
+            <ul class="flex space-x-4 sm:mt-0">
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
-</section>
+  </section> -->
+
+  <!-- BLOC: Прайс -->
+
+  <section>
+    <div class="container px-6 py-8 mx-auto ">
+      <div class="sm:flex sm:items-center sm:justify-center">
+        <div>
+          <a name="price"></a>
+          <h2
+            class="text-center text-3xl font-bold text-gray-800 lg:text-4xl text-gray-100 dark:text-dark-text-primary">
+            Наши <span class="text-dark-primary">услуги</span></h2>
+        </div>
+      </div>
+
+      <div class="grid gap-6 mt-16 mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+
+        <!-- Сайт визитка -->
+        <div
+          class="px-6 py-4 transition-colors duration-300 transform bg-gray-700 rounded-lg dark:bg-[#ebe4d1] crawl from-l">
+          <h2 class="text-3xl font-bold text-white lg:text-3xl dark:text-black">Сайт-визитка</h2>
+          <p class="mt-4 dark:text-gray-600  sm:h-24 md:h-16">Подойдет вам, если вы хотите рассказать самую важную информацию
+            о себе или о вашей компании</p>
+
+          <div class="my-12 flow-root">
+            <div class="mb-10 space-y-4">
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Одностраничный <br> сайт-визитка</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Время разработки - 7 дней</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Оригинальный дизайн</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">CEO оптимизация</span>
+              </div>
+            </div>
+
+
+            <div class="absolute inset-x-0 mx-5 bottom-4">
+              <button
+              class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform dark:bg-dark-primary rounded-md dark:hover:bg-indigo-700 focus:outline-none focus:bg-blue-600"
+              type="button" onclick="toggleModal('modal-id')">
+                Выбрать план
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Лэндинг -->
+
+        <div
+          class="px-6 py-4 transition-colors duration-300 transform bg-gray-700 rounded-lg dark:bg-[#ebe4d1] crawl from-l">
+          <h2 class="text-3xl font-bold text-white lg:text-3xl dark:text-black">Лэндинг</h2>
+
+          <p class="mt-4 dark:text-gray-600 sm:h-24 md:h-16">Подойдет вам, если у вас всего один продукт или услуга, и вам
+            нужно максимально ёмко раскрыть его ценность</p>
+
+          <div class="my-12 flow-root">
+            <div class="mb-10 space-y-4">
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Одностраничный <br> лэндинг</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Время разработки - 7 дней</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Оригинальный дизайн</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">CEO оптимизация</span>
+              </div>
+            </div>
+
+
+            <div class="absolute inset-x-0 mx-5 mt-10 bottom-4">
+              <button
+              class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform dark:bg-dark-primary rounded-md dark:hover:bg-indigo-700 focus:outline-none focus:bg-blue-600"
+              type="button" onclick="toggleModal('modal-id')">
+                Выбрать план
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <!-- Корпоративный сайт -->
+        <div
+          class="px-6 py-4 transition-colors duration-300 transform bg-gray-700 rounded-lg dark:bg-[#ebe4d1] crawl from-l">
+          <h2 class="text-3xl font-bold text-white lg:text-3xl dark:text-black">Корпоративный сайт</h2>
+
+          <p class="mt-4 dark:text-gray-600 sm:h-24 md:h-16">Подойдет вам, если вы хотите опубликовать новость/событие,
+            разместить информацию для посетителей</p>
+
+          <div class="my-12 flow-root">
+            <div class="mb-10 space-y-4">
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Многостраничный корпоративный сайт</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Время разработки - 10 дней</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">Оригинальный дизайн</span>
+              </div>
+
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 20 20"
+                  fill="#4f46e5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+
+                <span class="mx-4 dark:text-gray-600">CEO оптимизация</span>
+              </div>
+            </div>
+
+
+
+            <div class="absolute inset-x-0 mx-5 bottom-4">
+              <button
+                class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform dark:bg-dark-primary rounded-md dark:hover:bg-indigo-700 focus:outline-none focus:bg-blue-600"
+                type="button" onclick="toggleModal('modal-id')">
+                Выбрать план
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- WIDGET: alert pop-up: Наши контакты-->
+
+  <section>
+    <div
+      class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+      id="modal-id">
+      <div class="relative w-auto my-6 mx-auto max-w-3xl">
+        <!--content-->
+        <div
+          class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+          <!--header-->
+          <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+            <h3 class="text-3xl font-semibold">
+              Наши контакты
+            </h3>
+            <button
+              class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+              onclick="toggleModal('modal-id')">
+              <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                ×
+              </span>
+            </button>
+          </div>
+          <!--body-->
+          <div class="relative p-6 flex-auto">
+            <p class="my-4 text-slate-500 text-lg leading-relaxed">
+              Если вы хотите заказать сайт у нас, тыкните на нашу почту, или позвоните нам по телефону <br>
+              <br>
+              <a href="mailto:pursuance@pursuance.tech?subject=Разработка сайта&body=Здравствуйте,хочу заказать у вас сайт-визитку"
+                title="pursuance@pursuance.tech">mail: pursuance@pursuance.tech</a><br>
+              <a href="tel:+7-901-715-14-56" title="+7-901-715-14-56">телефон: +7-901-715-14-56 </a>
+            </p>
+          </div>
+          <!--footer-->
+          <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+            <button
+              class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button" onclick="toggleModal('modal-id')">
+              Закрыть
+            </button>
+            <button
+              class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button" onclick="toggleModal('modal-id')">
+              Ок
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+  </section>
+
+  <!-- BLOC: Footer -->
+  <div class="mt-16 px-6 mx-16 flex flex-col border-t-[1px] border-[#5d6e93] md:flex-row"></div>
+  <footer class="bg-slate-100 dark:bg-dark-grey">
+    <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
+      <a href="#" class="flex items-center whitespace-nowrap text-2xl font-black">
+        <!--         <span class="mr-2 w-8">
+          <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
+        </span> -->
+        <img src="assets/svg/logo.svg" alt="SWAG" class="ml-10 lg:ml-0">
+        <h1 class="name_company mx-3">SWAG</h1>
+      </a>
+
+      <p class="text-sm text-gray-600 dark:text-gray-300">© Copyright 2021. All Rights Reserved.</p>
+      <a class="rounded text-gray-500 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+        href="#">↑</a>
+      <div class="flex -mx-2">
+        <a href="#"
+          class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+          aria-label="Reddit">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#"
+          class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+          aria-label="Facebook">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#"
+          class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+          aria-label="Github">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
